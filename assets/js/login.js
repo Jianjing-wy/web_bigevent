@@ -28,9 +28,7 @@ $(function () {
     repwd: function (value) {
       const content = $('#pwd').val()
       if (value !== content) return '两次输入的密码不一致'
-
     }
-
   })
 
   //监听注册表单的提交事件
@@ -47,11 +45,8 @@ $(function () {
         return layer.msg(res.message)
         }
         layer.msg('终于注册成功了 么么哒')
-
       }
-
     )
-
   })
 
   //监听登录表单的提交事件
@@ -70,6 +65,7 @@ $(function () {
 
   //把登录成功的token值存储到本地存储
   localStorage.setItem('token',res.token)
+  console.log(res.token);
   location.href='/index.html'
 
   }
